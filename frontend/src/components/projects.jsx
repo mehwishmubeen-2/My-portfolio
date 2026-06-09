@@ -19,7 +19,7 @@ const FALLBACK_PROJECTS = [
     tags: ["React / Next.js", "Node.js", "OpenAI", "MongoDB"],
     accent: "#f43f5e",
     githubLink: "https://github.com/mehwishmubeen-2/Snapbook",
-    liveLink: "snapbook-ivct.onrender.com/"
+    liveLink: "https://snapbook-ivct.onrender.com/"
   },
   {
     _id: "static-3",
