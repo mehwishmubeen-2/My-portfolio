@@ -13,6 +13,12 @@ export default function App() {
   const [active, setActive] = useState("Home");
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [showTooltip, setShowTooltip] = useState(true);
+
+  // Always start at top on first load
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     const onScroll = () => {
@@ -342,6 +348,79 @@ export default function App() {
       {/* AI Chatbot */}
       <div id="chatbot">
         <ChatBot />
+      </div>
+
+      {/* Floating AI Chat Button */}
+      <div style={{
+        position: "fixed",
+        bottom: "2rem",
+        right: "2rem",
+        zIndex: 200,
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "flex-end",
+        gap: "0.6rem",
+      }}>
+        {showTooltip && (
+          <div style={{
+            background: "var(--surface2)",
+            border: "1px solid rgba(200,169,110,0.35)",
+            color: "var(--text)",
+            fontSize: "0.78rem",
+            lineHeight: "1.5",
+            padding: "0.65rem 1rem",
+            borderRadius: "10px",
+            maxWidth: "200px",
+            textAlign: "right",
+            boxShadow: "0 4px 20px rgba(0,0,0,0.4)",
+            position: "relative",
+          }}>
+            Ask anything from AI about Mehwish's skills &amp; projects ✨
+            <button
+              onClick={() => setShowTooltip(false)}
+              style={{
+                position: "absolute",
+                top: "4px",
+                right: "6px",
+                background: "none",
+                border: "none",
+                color: "var(--muted)",
+                cursor: "pointer",
+                fontSize: "0.7rem",
+                lineHeight: 1,
+                padding: 0,
+              }}
+              aria-label="Dismiss"
+            >✕</button>
+          </div>
+        )}
+        <button
+          onClick={() => scrollTo("Chat with AI")}
+          title="Chat with AI"
+          style={{
+            width: "54px",
+            height: "54px",
+            borderRadius: "50%",
+            background: "linear-gradient(135deg, var(--accent), #b8860b)",
+            border: "none",
+            cursor: "pointer",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            boxShadow: "0 4px 20px rgba(200,169,110,0.4)",
+            transition: "transform 0.2s ease, box-shadow 0.2s ease",
+            flexShrink: 0,
+          }}
+          onMouseEnter={e => { e.currentTarget.style.transform = "scale(1.1)"; e.currentTarget.style.boxShadow = "0 6px 28px rgba(200,169,110,0.55)"; }}
+          onMouseLeave={e => { e.currentTarget.style.transform = "scale(1)"; e.currentTarget.style.boxShadow = "0 4px 20px rgba(200,169,110,0.4)"; }}
+        >
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            <circle cx="9" cy="10" r="1" fill="#000"/>
+            <circle cx="12" cy="10" r="1" fill="#000"/>
+            <circle cx="15" cy="10" r="1" fill="#000"/>
+          </svg>
+        </button>
       </div>
 
       {/* Footer */}
