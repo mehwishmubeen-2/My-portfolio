@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const NAV_LINKS = ["Home", "About", "Skills", "Projects", "Contact"];
+const NAV_LINKS = ["Home", "About", "Skills", "Projects", "chat with AI"];
 
 export default function Navbar() {
   const [active, setActive] = useState("Home");
@@ -39,7 +39,7 @@ export default function Navbar() {
   return (
     <>
       <nav className={scrolled ? "scrolled" : ""}>
-        <span className="nav-logo" onClick={() => scrollTo("home")}>YN.</span>
+        <span className="nav-logo" />
 
         {/* Desktop Links */}
         <ul className="nav-links">
