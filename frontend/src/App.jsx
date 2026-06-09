@@ -82,7 +82,7 @@ export default function App() {
         ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
 
         /* Nav */
-        nav {
+        .app-nav {
           position: fixed;
           top: 0; left: 0; right: 0;
           z-index: 100;
@@ -93,7 +93,7 @@ export default function App() {
           padding: 0 clamp(1.5rem, 5vw, 4rem);
           transition: background 0.4s ease, border-bottom 0.4s ease;
         }
-        nav.scrolled {
+        .app-nav.scrolled {
           background: rgba(10,10,15,0.92);
           backdrop-filter: blur(16px);
           -webkit-backdrop-filter: blur(16px);
@@ -296,7 +296,7 @@ export default function App() {
       `}</style>
 
       {/* Navbar */}
-      <nav className={scrolled ? "scrolled" : ""}>
+      <nav className={`app-nav${scrolled ? " scrolled" : ""}`}>
         <span className="nav-logo" onClick={() => scrollTo("home")}>YN.</span>
 
         <ul className="nav-links">
@@ -349,7 +349,7 @@ export default function App() {
         fontSize: "0.8rem",
         letterSpacing: "0.08em",
       }}>
-        © {new Date().getFullYear()} Mehwish Mubeen — Built with React + Vite
+        © {new Date().getFullYear()}i am Mehwish Mubeen  — Built with React + Vite
       </footer>
     </BrowserRouter>
   );

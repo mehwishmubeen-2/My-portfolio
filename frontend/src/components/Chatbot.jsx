@@ -29,17 +29,38 @@ function Chatbot() {
     setLoading(true);
 
  try {
-      // Clean target mapping directly to the sub-route layer
-const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
-const res = await axios.post(`${BASE_URL}/api/chat`, {
-        message: input,
-        history: messages.slice(1), 
-      });
+      const GROQ_API_KEY = import.meta.env.VITE_GROQ_API_KEY;
 
-      setMessages((prev) => [
-        ...prev,
-        { role: "assistant", content: res.data.reply },
-      ]);
+      if (!GROQ_API_KEY) {
+        throw new Error("VITE_GROQ_API_KEY is not set");
+      }
+
+      const res = await axios.post(
+        "https://api.groq.com/openai/v1/chat/completions",
+        {
+          model: "llama3-8b-8192",
+          messages: [
+            {
+              role: "system",
+              content:
+                "You are Mehwish Mubeen's AI portfolio assistant. Mehwish is an AI Engineer and Full-Stack Developer based in Lahore, Pakistan. She specializes in RAG (Retrieval-Augmented Generation) systems, MERN stack, and Python AI backends. Her key projects include: GitHub RAG Bot (Groq + LlamaIndex, chats with GitHub codebases), PDF RAG Chatbot (Groq + Llama3 + FAISS, chats with PDF documents), Parallel & Distributed Computing Engine (Python, Docker), SnapBook (photographer booking platform, React/Next.js, Node.js), SignVerse (sign language ML translator). Her tech stack: Python, Groq API, LlamaIndex, FAISS, Llama 3, Streamlit, React, Node.js, MongoDB, Docker. Answer questions about her skills, projects, and background in a friendly, concise way.",
+            },
+            ...messages.map((m) => ({ role: m.role, content: m.content })),
+            { role: "user", content: input },
+          ],
+          temperature: 0.7,
+          max_tokens: 512,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${GROQ_API_KEY}`,
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      const reply = res.data.choices[0].message.content;
+      setMessages((prev) => [...prev, { role: "assistant", content: reply }]);
 
     } catch (error) {
       console.error("Chat error:", error);
@@ -47,7 +68,7 @@ const res = await axios.post(`${BASE_URL}/api/chat`, {
         ...prev,
         {
           role: "assistant",
-          content: "Sorry, I had trouble connecting to the backend server. Please make sure it's running!",
+          content: "Sorry, I couldn't reach the AI. Please try again shortly!",
         },
       ]);
     } finally {

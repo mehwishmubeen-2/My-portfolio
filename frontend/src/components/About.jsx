@@ -72,8 +72,7 @@ export default function About() {
 
         <div className="about-stats">
           {[
-            { num: '5+',  lbl: 'Projects Shipped' },
-            { num: '2+',  lbl: 'Years Coding' },
+            { num: '5+',  lbl: 'Projects build' },
             { num: 'RAG', lbl: 'AI Speciality' },
             { num: 'LHR', lbl: 'Based in Lahore' },
           ].map(({ num, lbl }) => (

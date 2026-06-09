@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import axios from "axios";
 
 // Static backup array in case your MongoDB database is empty or loading
@@ -87,16 +86,6 @@ export default function Projects() {
 
   return (
     <div id="projects" className="projects-root">
-      {/* ── NAVIGATION ─────────────────────────────────── */}
-      <div className="proj-nav">
-        <Link to="/" className="back-home-link">
-          ← Back to Overview
-        </Link>
-        <Link to="/chat" className="proj-nav-cta">
-          <span className="pulse-dot" /> Ask AI About My Code
-        </Link>
-      </div>
-
       {/* ── HEADER ─────────────────────────────────────── */}
       <header className="proj-header">
         <p className="proj-eyebrow">Engineering Repository</p>
@@ -176,15 +165,12 @@ export default function Projects() {
           color: var(--text);
           font-family: var(--font-head);
           min-height: 100vh;
+          padding-top: calc(72px + 3rem);
           padding-bottom: 5rem;
         }
 
         .proj-nav {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 1.5rem 4rem;
-          border-bottom: 1px solid var(--border);
+          display: none;
         }
 
         .back-home-link {
