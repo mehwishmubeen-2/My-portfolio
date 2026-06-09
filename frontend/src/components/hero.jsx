@@ -299,7 +299,7 @@ export default function Hero() {
           </h2>
 
           <p className="hero-desc">
-I build intelligent, performant web experiences that live at the intersection of machine learning and modern engineering. Based in Lahore — available worldwide.          </p>
+I build intelligent, performant web experiences that live at the intersection of machine learning and modern engineering. Based in Lahore —       </p>
 
           <div className="hero-cta">
             <button className="btn btn-primary" onClick={() => scrollTo("projects")}>
