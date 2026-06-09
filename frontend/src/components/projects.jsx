@@ -9,8 +9,8 @@ const FALLBACK_PROJECTS = [
     desc: "A high-performance computing system utilizing multi-threading, distributed nodes, and advanced data structures to process complex algorithms in parallel.",
     tags: ["Python", "Docker", "DevOps", "Algorithms"],
     accent: "#2563eb",
-    githubLink: "https://github.com",
-    liveLink: "https://google.com"
+    githubLink: "https://github.com/mehwishmubeen-2/parallel-audio-engine",
+    
   },
   {
     _id: "static-2",
@@ -18,8 +18,8 @@ const FALLBACK_PROJECTS = [
     desc: "A service-based photographer booking platform featuring SEO-optimized landing pages, real-time availability, and an AI assistant for client inquiries.",
     tags: ["React / Next.js", "Node.js", "OpenAI", "MongoDB"],
     accent: "#f43f5e",
-    githubLink: "https://github.com",
-    liveLink: "https://google.com"
+    githubLink: "https://github.com/mehwishmubeen-2/Snapbook",
+    liveLink: "snapbook-ivct.onrender.com/"
   },
   {
     _id: "static-3",
@@ -28,7 +28,7 @@ const FALLBACK_PROJECTS = [
     tags: ["JavaScript (ES6+)", "Machine Learning", "Python", "HTML5 / CSS3"],
     accent: "#7c3aed",
     githubLink: "https://github.com/mehwishmubeen-2/Signverse",
-    liveLink: "https://google.com"
+    
   },
   {
     _id: "static-4",
