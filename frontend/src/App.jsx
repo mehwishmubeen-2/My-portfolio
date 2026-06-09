@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter } from 'react-router-dom' // 1. IMPORT THIS
-import Hero from "./components/Hero";
+import Hero from "./components/hero";
 import About from "./components/About";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-import ChatBot from "./components/ChatBot";
+import Skills from "./components/skills";
+import Projects from "./components/projects";
+import Contact from "./components/contact";
+import ChatBot from "./components/Chatbot";
 import Navbar from "./components/navbar"; // <-- Import the new Navbar
 
 const NAV_LINKS = ["Home", "About", "Skills", "Projects", "Contact"];
