@@ -86,7 +86,7 @@ export default function Projects() {
     : projects.filter((p) => p.tags?.includes(selectedTag));
 
   return (
-    <div className="projects-root">
+    <div id="projects" className="projects-root">
       {/* ── NAVIGATION ─────────────────────────────────── */}
       <nav className="proj-nav">
         <Link to="/" className="back-home-link">

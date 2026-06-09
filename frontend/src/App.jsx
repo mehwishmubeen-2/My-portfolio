@@ -332,10 +332,10 @@ export default function App() {
       {/* Pages */}
       <main>
         <section id="home"><Hero /></section>
-        <section id="about"><About /></section>
-        <section id="skills"><Skills /></section>
-        <section id="projects"><Projects /></section>
-        <section id="contact"><Contact /></section>
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
       </main>
 
       {/* AI Chatbot */}

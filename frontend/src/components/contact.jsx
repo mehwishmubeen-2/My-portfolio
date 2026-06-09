@@ -5,7 +5,8 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" style={{ maxWidth: "600px", margin: "0 auto" }}>
+    <section id="contact">
+      <div style={{ maxWidth: "600px" }}>
       <div className="divider" />
       <span className="tag">Get In Touch</span>
       <h2 className="section-title">Let's Collaborate</h2>
@@ -45,6 +46,7 @@ export default function Contact() {
           Send Message
         </button>
       </form>
+      </div>
     </section>
   );
 }
