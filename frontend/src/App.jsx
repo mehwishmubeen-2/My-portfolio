@@ -350,7 +350,7 @@ export default function App() {
         fontSize: "0.8rem",
         letterSpacing: "0.08em",
       }}>
-        © {new Date().getFullYear()} Your Name — Built with React + Vite
+        © {new Date().getFullYear()} Mehwish Mubeen — Built with React + Vite
       </footer>
     </BrowserRouter>
   );

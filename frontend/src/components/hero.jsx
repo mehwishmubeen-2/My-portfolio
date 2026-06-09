@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
 // Animated word cycling
-const ROLES = ["Frontend Developer", "UI/UX Designer", "React Specialist", "Problem Solver"];
+const ROLES = ["MERN STACK Developer", "AI/ML Engineer", "React Specialist", "Problem Solver"];
 
 export default function Hero() {
   const [roleIndex, setRoleIndex] = useState(0);
@@ -322,11 +322,11 @@ export default function Hero() {
         <div className="hero-content">
           <div className="hero-greeting">
             <div className="hero-greeting-line" />
-            <span>Hello, world</span>
+            <span>Hello</span>
           </div>
 
           <h1 className="hero-name">
-            Your <span>Name</span>
+            Mehwish <span>Mubeen</span>
           </h1>
 
           <h2 className="hero-role">
@@ -335,8 +335,7 @@ export default function Hero() {
           </h2>
 
           <p className="hero-desc">
-            I craft beautiful, performant web experiences that live at the intersection of design and engineering. Based in your city — available worldwide.
-          </p>
+I build intelligent, performant web experiences that live at the intersection of machine learning and modern engineering. Based in Lahore — available worldwide.          </p>
 
           <div className="hero-cta">
             <button className="btn btn-primary" onClick={() => scrollTo("projects")}>
