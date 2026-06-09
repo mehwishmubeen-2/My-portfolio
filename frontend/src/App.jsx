@@ -375,8 +375,7 @@ export default function App() {
             boxShadow: "0 4px 20px rgba(0,0,0,0.4)",
             position: "relative",
           }}>
-            Ask anything from AI about Mehwish's skills &amp; projects ✨
-            <button
+Mehwish's AI Assistant: Get instant answers about my skills and project portfolio."            <button
               onClick={() => setShowTooltip(false)}
               style={{
                 position: "absolute",
