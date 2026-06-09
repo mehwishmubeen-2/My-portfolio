@@ -163,10 +163,10 @@ export default function Hero() {
 
         .hero-name {
           font-family: var(--font-display);
-          font-size: clamp(3.5rem, 9vw, 7rem);
+          font-size: clamp(2.4rem, 5.5vw, 4.2rem);
           font-weight: 900;
-          line-height: 1.0;
-          letter-spacing: -0.03em;
+          line-height: 1.05;
+          letter-spacing: -0.02em;
           color: var(--text);
           margin-bottom: 0.5rem;
           opacity: 0;
@@ -180,7 +180,7 @@ export default function Hero() {
 
         .hero-role {
           font-family: var(--font-display);
-          font-size: clamp(1.5rem, 4vw, 2.8rem);
+          font-size: clamp(1.1rem, 2.5vw, 1.7rem);
           font-weight: 400;
           color: var(--muted);
           margin-bottom: 2rem;
@@ -244,39 +244,7 @@ export default function Hero() {
           animation: scrollPulse 1.8s ease-in-out infinite;
         }
 
-        /* Floating badge */
-        .hero-badge {
-          position: absolute;
-          right: clamp(2rem, 8vw, 8rem);
-          top: 50%;
-          transform: translateY(-50%);
-          width: 140px;
-          height: 140px;
-          border: 1px solid rgba(200,169,110,0.2);
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-          opacity: 0;
-          animation: fadeIn 1s 1.2s ease forwards, rotateSlow 20s linear infinite;
-          z-index: 1;
-        }
-        .hero-badge-inner {
-          font-family: var(--font-display);
-          font-size: 0.75rem;
-          line-height: 1.6;
-          color: var(--muted);
-          letter-spacing: 0.05em;
-        }
-        .hero-badge-inner strong {
-          display: block;
-          font-size: 1.8rem;
-          font-weight: 900;
-          color: var(--accent);
-          line-height: 1;
-          margin-bottom: 0.2rem;
-        }
+        /* Floating badge removed */
 
         /* Horizontal rule accent */
         .hero-hr {
@@ -304,10 +272,6 @@ export default function Hero() {
         @keyframes scrollPulse {
           0%, 100% { transform: scaleY(1); opacity: 1; }
           50%       { transform: scaleY(0.6); opacity: 0.4; }
-        }
-        @keyframes rotateSlow {
-          from { transform: translateY(-50%) rotate(0deg); }
-          to   { transform: translateY(-50%) rotate(360deg); }
         }
 
         @media (max-width: 768px) {
@@ -344,14 +308,6 @@ I build intelligent, performant web experiences that live at the intersection of
             <button className="btn btn-outline" onClick={() => scrollTo("contact")}>
               Get In Touch
             </button>
-          </div>
-        </div>
-
-        {/* Circular badge */}
-        <div className="hero-badge">
-          <div className="hero-badge-inner">
-            <strong>3+</strong>
-            Years of<br />Experience
           </div>
         </div>
 

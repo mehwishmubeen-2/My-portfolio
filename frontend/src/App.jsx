@@ -6,7 +6,6 @@ import Skills from "./components/skills";
 import Projects from "./components/projects";
 import Contact from "./components/contact";
 import ChatBot from "./components/Chatbot";
-import Navbar from "./components/navbar"; // <-- Import the new Navbar
 
 const NAV_LINKS = ["Home", "About", "Skills", "Projects", "Contact"];
 

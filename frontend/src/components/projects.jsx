@@ -88,14 +88,14 @@ export default function Projects() {
   return (
     <div id="projects" className="projects-root">
       {/* ── NAVIGATION ─────────────────────────────────── */}
-      <nav className="proj-nav">
+      <div className="proj-nav">
         <Link to="/" className="back-home-link">
           ← Back to Overview
         </Link>
         <Link to="/chat" className="proj-nav-cta">
           <span className="pulse-dot" /> Ask AI About My Code
         </Link>
-      </nav>
+      </div>
 
       {/* ── HEADER ─────────────────────────────────────── */}
       <header className="proj-header">
