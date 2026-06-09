@@ -7,7 +7,7 @@ import Projects from "./components/projects";
 import Contact from "./components/contact";
 import ChatBot from "./components/Chatbot";
 
-const NAV_LINKS = ["Home", "About", "Skills", "Projects", "Contact"];
+const NAV_LINKS = ["Home", "About", "Skills", "Projects", "Chat with AI"];
 
 export default function App() {
   const [active, setActive] = useState("Home");
@@ -20,13 +20,14 @@ export default function App() {
 
       // Highlight active nav based on scroll position
       const sections = NAV_LINKS.map((l) => ({
-        id: l.toLowerCase(),
-        el: document.getElementById(l.toLowerCase()),
+        id: l === "Chat with AI" ? "chatbot" : l.toLowerCase(),
+        label: l,
+        el: document.getElementById(l === "Chat with AI" ? "chatbot" : l.toLowerCase()),
       }));
       for (let i = sections.length - 1; i >= 0; i--) {
         const el = sections[i].el;
         if (el && window.scrollY >= el.offsetTop - 120) {
-          setActive(NAV_LINKS[i]);
+          setActive(sections[i].label);
           break;
         }
       }
@@ -36,7 +37,8 @@ export default function App() {
   }, []);
 
   const scrollTo = (section) => {
-    const el = document.getElementById(section.toLowerCase());
+    const id = section === "Chat with AI" ? "chatbot" : section.toLowerCase();
+    const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: "smooth" });
     setMenuOpen(false);
   };
@@ -338,7 +340,9 @@ export default function App() {
       </main>
 
       {/* AI Chatbot */}
-      <ChatBot />
+      <div id="chatbot">
+        <ChatBot />
+      </div>
 
       {/* Footer */}
       <footer style={{
