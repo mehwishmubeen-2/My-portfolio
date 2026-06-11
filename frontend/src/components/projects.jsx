@@ -60,7 +60,7 @@ const FALLBACK_PROJECTS = [
 },
 {
   _id: "static-6",
-  title: "Snapbook",
+  title: "Snapbook MERN DOCKER",
   desc: "A full-stack e-commerce platform built with the MERN stack, featuring user authentication, cart functionality, order management, and payment integration. Containerized with Docker and connected to MongoDB Atlas for cloud-hosted database management.",
   tags: ["React.js", "Node.js", "Express.js", "MongoDB", "Docker", "REST API"],
   accent: "#f59e0b",
