@@ -47,7 +47,26 @@ const FALLBACK_PROJECTS = [
     accent: "#10b981",
     githubLink: "https://github.com/mehwishmubeen-2/pdf-RAG",
     liveLink: "https://pdf-rag-grzdrrftefaquzhc2pwiky.streamlit.app/"
-  }
+  },
+
+  {
+  _id: "static-6",
+  title: "Content Creation AI Agent",
+  desc: "An AI-powered agent that researches topics on the live web and generates publication-ready content end-to-end — blog posts, social media posts, video scripts, and captions. Built with Groq (Llama 3.3), Tavily Search, and React.",
+  tags: ["React", "Node.js", "Express", "Groq", "Llama 3.3", "Tavily", "AI Agent"],
+  accent: "#6c63ff",
+  githubLink: "https://github.com/mehwishmubeen-2/content-creation-AIagent",
+  liveLink: "https://content-creation-aiagent-1.onrender.com/"
+},
+{
+  _id: "static-6",
+  title: "Snapbook",
+  desc: "A full-stack e-commerce platform built with the MERN stack, featuring user authentication, cart functionality, order management, and payment integration. Containerized with Docker and connected to MongoDB Atlas for cloud-hosted database management.",
+  tags: ["React.js", "Node.js", "Express.js", "MongoDB", "Docker", "REST API"],
+  accent: "#f59e0b",
+  githubLink: "https://github.com/mehwishmubeen-2/snapbook-MERN-Docker",
+  liveLink: "https://snapbook-ivct.onrender.com/"
+}
 ];
 
 export default function Projects() {
